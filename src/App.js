@@ -32,7 +32,6 @@ function App() {
         bye 
       </div>
 
-  
     </div>
 
       <Textinput 
