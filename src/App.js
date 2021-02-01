@@ -17,9 +17,7 @@ function App() {
         {messages[0].text}
       </div> 
   */}
-
     <div className = "text">
-
       <div className = "text1">
         hello this is a message 
       </div>
@@ -32,7 +30,6 @@ function App() {
         bye 
       </div>
 
-  
     </div>
 
       <Textinput 
