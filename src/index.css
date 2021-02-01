@@ -7,6 +7,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* MOBILE */
+html{
+  font-size:14px;
+}
+/* TABLET */
+@media only screen and (min-width: 480px) {
+  html{
+      font-size:16px;
+  }
+}
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+  html{
+      font-size:18px;
+  }
+}
+/* X-LARGE */
+@media only screen and (min-width: 1024px) {
+  html{
+      font-size:20px;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
