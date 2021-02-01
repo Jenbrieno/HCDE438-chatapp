@@ -2,10 +2,11 @@
 import { useState } from "react"
 import './App.css';
 import Textinput from './Textinput';
+import Message from './Message'
 
 
 function App() {
-  const [messages, setMessages] = useState([{text:'hello'}])
+  const [messages, setMessages] = useState([])
   return <div className="App">
 
       <header className = "header">
@@ -13,30 +14,22 @@ function App() {
         LetsChat
       </header>
 
-      {/* <div className="message">
-        {messages[0].text}
-      </div> 
-  */}
-    <div className = "text">
-      <div className = "text1">
-        hello this is a message 
+    
+      <div className="messages">
+        {messages.map((m,i)=> {
+          return <Message key={i} {...m} />
+        })}
       </div>
 
-      <div className = "text1">
-        lol
-      </div>
+    <Textinput 
+      send={(t)=> setMessages( [{text:t}, ...messages] )}
+    />
 
-      <div className = "text1">
-        bye 
-      </div>
+  </div>
 
-    </div>
+  
 
-      <Textinput 
-        send={(t)=> setMessages([{text:t}])}
-      />
 
-    </div>
 
 }
 

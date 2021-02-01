@@ -1,10 +1,12 @@
 import { useState } from "react"
 
 
+
 function Textinput(props) {
     const[text, setText] = useState('')
 
     function sendMessage(){
+        if(text==='') return
         props.send(text)
         setText('')
     }
@@ -27,7 +29,6 @@ function Textinput(props) {
             onClick={sendMessage}>
         </button>
       
-
     </footer>
 }
 
